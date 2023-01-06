@@ -1,0 +1,17 @@
+@import 'vars';
+
+.img-block {
+    padding: 900px 0px 0px 0px;
+    background: url(../img/footer-top.png) center center no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    background: $dark;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 300px;
+    }
+}

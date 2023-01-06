@@ -1,0 +1,116 @@
+@import 'vars';
+
+.header {
+    &__title {
+        font-family: 'Corporate A', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 120%;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: 5px;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100px;
+    }
+
+    &__logo {
+        margin-left: 150px;
+    }
+
+    &__content {
+        background-image: url(../img/header.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        padding: 630px 0px 50px 0px;
+
+    }
+
+    &__content::before {
+        content: '';
+        position: absolute;
+        background: url(../img/decor.svg) no-repeat center 0;
+        background-size: contain;
+        width: 50px;
+        height: 50px;
+        bottom: -22px;
+    }
+
+    .header__description {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        color: #FFFFFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 991.98px) {
+        &__logo {
+            margin-left: 0px;
+        }
+
+        .logo__img {
+            max-width: 200px;
+        }
+
+        &__content {
+            padding: 250px 0px 30px 0px;
+        }
+
+        &__title {
+            font-size: 43px;
+        }
+
+        &__description {
+            font-size: 18px;
+        }
+
+        &__content::before {
+            width: 40px;
+            height: 40px;
+            bottom: -25px;
+        }
+    }
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+
+    &__item+&__item {
+        margin-left: 25px;
+    }
+
+    &__link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+    }
+
+    &__link:hover {
+        background: $pink;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .list {
+        display: none;
+    }
+}

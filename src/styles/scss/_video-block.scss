@@ -1,0 +1,41 @@
+@import 'vars';
+
+.video {
+    &_bottom {
+        margin-bottom: 150px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    &__btn {
+        margin-top: 25px;
+    }
+
+    & span {
+        position: relative;
+    }
+
+    & span::before {
+        content: "";
+        position: absolute;
+        background: url(../img/play-icon.svg) 0 0 no-repeat;
+        width: 25px;
+        height: 25px;
+        top: -2px;
+        left: -30px;
+    }
+
+    @media (max-width: 991.98px) {
+        &_bottom {
+            margin-bottom: 100px;
+        }
+    }
+}
